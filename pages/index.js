@@ -1,10 +1,8 @@
 import { MAP_LIST } from '@/components/map/constant';
 import dynamic from 'next/dynamic';
 
-import Head from 'next/head'
 import { useState } from 'react';
-// import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-// import DebuggerMap from '../components/map'
+
 
 
 export default function Home() {
