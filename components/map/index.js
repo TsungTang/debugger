@@ -1,10 +1,13 @@
 
 
 
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
+import { MapContainer, FeatureGroup, TileLayer } from 'react-leaflet'
 import "leaflet/dist/leaflet.css";
-import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
-import "leaflet-defaulticon-compatibility";
+import "leaflet-draw/dist/leaflet.draw.css"
+import { EditControl } from "react-leaflet-draw"
+
+// import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
+// import "leaflet-defaulticon-compatibility";
 
 import { useSwitchMap } from './utils';
 import BoundsRectangles from './BoundRectangles';
@@ -28,6 +31,17 @@ const Map = ({ MapType }) => {
         minZoom={mapInfo.minZoom}
         maxZoom={mapInfo.maxZoom}
       />
+      <FeatureGroup>
+        <EditControl
+          position='topright'
+          // onEdited={this._onEditPath}
+          // onCreated={this._onCreate}
+          // onDeleted={this._onDeleted}
+          draw={{
+            rectangle: false
+          }}
+        />
+      </FeatureGroup>
       {
         RectanglesData.map(d => <BoundsRectangles key={_uuid()} RectableInfo={{ outerBounds: d.outerBounds, color: "#c9551e", opacity: Math.random() }} />
 

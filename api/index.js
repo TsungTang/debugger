@@ -4,7 +4,7 @@ import axiosDebugger from "./debuggerAxios"
 export const FetchHelloWorld = async () => {
   try {
 
-    const res = await axiosDebugger.post(API_ENDPOINT.HELLO_WORLD)
+    const res = await axiosDebugger.post(API_ENDPOINT.HELLO_WORLD, { 'hello': 'hello' })
     return res.data
     /**
     {

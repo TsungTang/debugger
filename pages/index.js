@@ -2,15 +2,12 @@ import { MAP_LIST } from '@/components/map/constant';
 import dynamic from 'next/dynamic';
 
 import { useState } from 'react';
-import useSWR from 'swr';
 
 import { _uuid } from '@/utils';
-import { FetchHelloWorld } from '@/api';
 
 /*** server */
 import { promises as fs } from 'fs'
 import path from 'path'
-import { API_ENDPOINT } from '@/api/const';
 
 
 const Map = dynamic(
@@ -19,8 +16,7 @@ const Map = dynamic(
 )
 
 export default function Home({ countryArr }) {
-  // const { data, error } = useSWR(API_ENDPOINT.HELLO_WORLD, FetchHelloWorld)
-  // console.log(data)
+
 
   const [MapType, setMapType] = useState(MAP_LIST.OPEN_STREAT_MAP)
 
