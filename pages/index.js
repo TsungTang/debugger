@@ -1,3 +1,4 @@
+import DebuggerFilter from '@/components/Filter';
 import { MAP_LIST } from '@/components/map/constant';
 import dynamic from 'next/dynamic';
 
@@ -27,6 +28,7 @@ export default function Home({ countryArr }) {
     <div>
       <button className=" border-2" onClick={switchNewMap} >switch map</button>
       <Map MapType={MapType} />
+
       <div className="flex">
         {
           countryArr.map(el => {

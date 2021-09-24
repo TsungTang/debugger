@@ -1,6 +1,6 @@
-import { Rectangle } from 'react-leaflet'
+import { Rectangle, CircleMarker } from 'react-leaflet'
 
-import { useState } from "react"
+import { useMemo, useState } from "react"
 import { useMap } from 'react-leaflet';
 
 /**
@@ -13,6 +13,9 @@ import { useMap } from 'react-leaflet';
 function BoundsRectangles({ RectableInfo }) {
   const { outerBounds, color, opacity } = RectableInfo
   const [bounds, setBounds] = useState(outerBounds)
+  const center = useMemo(() => {
+    return [outerBounds[0][0] - ((outerBounds[0][0] - outerBounds[1][0]) / 2), outerBounds[1][1] - ((outerBounds[0][1] - outerBounds[1][1]) / 2)]
+  })
   const map = useMap()
 
   // const outerHandlers = useMemo(
@@ -27,14 +30,19 @@ function BoundsRectangles({ RectableInfo }) {
 
   return (
     <>
-      <Rectangle
+      <CircleMarker center={center} color={color}
+        fillColor={color}
+        fillOpacity={opacity}
+        opacity={0}
+        radius={Math.random() * 10} />
+      {/* <Rectangle
         bounds={outerBounds}
         // eventHandlers={outerHandlers}
         color={color}
         fillColor={color}
         fillOpacity={opacity}
         opacity={0}
-      />
+      /> */}
     </>
   )
 }

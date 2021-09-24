@@ -16,12 +16,14 @@ import BoundsRectangles from './BoundRectangles';
 import { RectanglesData } from './data/bound';
 import React from 'react';
 import { _uuid } from '@/utils';
+import DebuggerFilter from '../Filter';
 
 
 const Map = ({ MapType }) => {
   const { mapInfo } = useSwitchMap(MapType)
   return (
-    <MapContainer center={[23.773, 120.959]} zoom={7} scrollWheelZoom={true} style={{ height: 600, width: "80%" }}>
+    <MapContainer className="relative" center={[23.773, 120.959]} zoom={7} scrollWheelZoom={true} style={{ height: 600, width: "90%" }}>
+      <DebuggerFilter />
       <TileLayer
         attribution={mapInfo.attribution}
         url={mapInfo.url}
