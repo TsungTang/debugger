@@ -1,10 +1,11 @@
-import { API_ENDPOINT } from "./const"
+import { MIDDLE_ENDPOINT } from "./const"
 import axiosDebugger from "./debuggerAxios"
 
 export const FetchHelloWorld = async () => {
   try {
 
-    const res = await axiosDebugger.post(API_ENDPOINT.HELLO_WORLD, { 'hello': 'hello' })
+    const res = await axiosDebugger.get(MIDDLE_ENDPOINT.HELLO_WORLD)
+
     return res.data
     /**
     {

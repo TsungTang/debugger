@@ -5,11 +5,10 @@ import DebuggerLayout from '@/components/Layout';
 import NextNprogress from 'nextjs-progressbar';
 
 import { FetchHelloWorld } from '@/api';
-import { API_ENDPOINT } from '@/api/const';
+import { MIDDLE_ENDPOINT } from '@/api/const';
 import { APP_COLOR } from '@/const';
 function MyApp({ Component, pageProps }) {
-  const { error } = useSWR(API_ENDPOINT.HELLO_WORLD, FetchHelloWorld)
-
+  const { error } = useSWR(MIDDLE_ENDPOINT.HELLO_WORLD, FetchHelloWorld)
 
   return (
     <>

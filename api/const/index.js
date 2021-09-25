@@ -6,3 +6,7 @@ export const API_ENDPOINT = {
   BIOTRACK: 'api/biotrack',
   ECODIV: 'api/ecodiv'
 }
+
+export const MIDDLE_ENDPOINT = {
+  HELLO_WORLD: "/api/helloworld"
+}
