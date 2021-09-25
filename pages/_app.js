@@ -1,4 +1,6 @@
 import 'tailwindcss/tailwind.css'
+import "@/style/font-icon.css"
+
 import useSWR from 'swr';
 
 import DebuggerLayout from '@/components/Layout';
@@ -7,6 +9,7 @@ import NextNprogress from 'nextjs-progressbar';
 import { FetchHelloWorld } from '@/api';
 import { MIDDLE_ENDPOINT } from '@/api/const';
 import { APP_COLOR } from '@/const';
+import DebuggerAlert from '@/components/UI/alert';
 function MyApp({ Component, pageProps }) {
   const { error } = useSWR(MIDDLE_ENDPOINT.HELLO_WORLD, FetchHelloWorld)
 
@@ -19,9 +22,9 @@ function MyApp({ Component, pageProps }) {
         height={3}
         showOnShallow={true}
       />
-      <DebuggerLayout>
+      <DebuggerLayout  >
         {
-          error && <div>cannot connenct to server</div>
+          error && <DebuggerAlert msg={"server connection error"} />
         }
         <Component {...pageProps} />
       </DebuggerLayout>

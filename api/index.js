@@ -5,7 +5,6 @@ export const FetchHelloWorld = async () => {
   try {
 
     const res = await axiosDebugger.get(MIDDLE_ENDPOINT.HELLO_WORLD)
-
     return res.data
     /**
     {

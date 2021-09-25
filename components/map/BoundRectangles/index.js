@@ -1,4 +1,4 @@
-import { Rectangle, CircleMarker } from 'react-leaflet'
+import { CircleMarker } from 'react-leaflet'
 
 import { useMemo, useState } from "react"
 import { useMap } from 'react-leaflet';
