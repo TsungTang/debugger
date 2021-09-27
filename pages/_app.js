@@ -1,8 +1,6 @@
 import 'tailwindcss/tailwind.css'
 import "@/style/font-icon.css"
 
-import useSWR from 'swr';
-
 import DebuggerLayout from '@/components/Layout';
 import NextNprogress from 'nextjs-progressbar';
 
@@ -13,6 +11,8 @@ import Head from 'next/head';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from '@/context/materiaUI/theme';
+
+import "@/style/base.css"
 
 function MyApp({ Component, pageProps }) {
   // const { error } = useSWR(MIDDLE_ENDPOINT.HELLO_WORLD, FetchHelloWorld, { errorRetryCount: 1 })

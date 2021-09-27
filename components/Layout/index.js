@@ -9,11 +9,14 @@ import * as data from '@/data/country.json';
 function DebuggerLayout({ children }) {
   return (
     <>
-      <Navbar />
-      <CountryContext.Provider value={{ countryArr: data.default, currentCountry: "All Taiwan" }}>
-        <main>{children}</main>
-      </CountryContext.Provider>
-      <Footer />
+      <div className="">
+        <Navbar className="" />
+        <CountryContext.Provider value={{ countryArr: data.default, currentCountry: "All Taiwan" }}>
+          <main className="flex-grow">{children}</main>
+        </CountryContext.Provider>
+        {/* <Footer /> */}
+      </div>
+
     </>
   )
 }

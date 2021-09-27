@@ -1,12 +1,14 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 import { MenuItem, Select, FormControl } from "@material-ui/core"
 import { COUNTRY_ID_LIST, COUNTRY_NAME_LIST } from "./const";
 import { _uuid } from "@/utils";
 
+import CountryContext from "@/context/CountryContext";
 
 
 function DebuggerFilter() {
   const [seletCountry, setSelectCountry] = useState("All Taiwan")
+  const countryStore = useContext(CountryContext);
 
   const handleChange = event => {
     setSelectCountry(event.target.value)

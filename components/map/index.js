@@ -9,7 +9,7 @@ import { EditControl } from "react-leaflet-draw"
 
 
 import { useSwitchMap } from './utils';
-import BoundsRectangles from './BoundRectangles';
+import CustomCircleMark from './CustomCircleMark';
 
 /** data */
 import { RectanglesData } from './data/bound';
@@ -44,7 +44,7 @@ const Map = ({ MapType }) => {
         />
       </FeatureGroup>
       {
-        RectanglesData.map(d => <BoundsRectangles key={_uuid()} RectableInfo={{ outerBounds: d.outerBounds, color: "#c9551e", opacity: .2 }} />
+        RectanglesData.map(d => <CustomCircleMark key={_uuid()} RectableInfo={{ outerBounds: d.outerBounds, color: "#c9551e", opacity: .2 }} />
 
         )
       }

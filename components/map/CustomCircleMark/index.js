@@ -10,7 +10,7 @@ import { useMap } from 'react-leaflet';
 /**
  * @param {{RectableInfo: {outerBounds:outerBoundsType, color:string}}} param0 
  */
-function BoundsRectangles({ RectableInfo }) {
+function CustomCircleMark({ RectableInfo }) {
   const { outerBounds, color, opacity } = RectableInfo
   const [bounds, setBounds] = useState(outerBounds)
   const center = useMemo(() => {
@@ -47,4 +47,4 @@ function BoundsRectangles({ RectableInfo }) {
   )
 }
 
-export default memo(BoundsRectangles)
+export default memo(CustomCircleMark)
