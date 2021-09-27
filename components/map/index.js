@@ -6,8 +6,7 @@ import "leaflet/dist/leaflet.css";
 import "leaflet-draw/dist/leaflet.draw.css"
 import { EditControl } from "react-leaflet-draw"
 
-// import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
-// import "leaflet-defaulticon-compatibility";
+
 
 import { useSwitchMap } from './utils';
 import BoundsRectangles from './BoundRectangles';
@@ -45,11 +44,10 @@ const Map = ({ MapType }) => {
         />
       </FeatureGroup>
       {
-        RectanglesData.map(d => <BoundsRectangles key={_uuid()} RectableInfo={{ outerBounds: d.outerBounds, color: "#c9551e", opacity: Math.random() }} />
+        RectanglesData.map(d => <BoundsRectangles key={_uuid()} RectableInfo={{ outerBounds: d.outerBounds, color: "#c9551e", opacity: .2 }} />
 
         )
       }
-
 
     </MapContainer>
   )

@@ -6,15 +6,23 @@ import useSWR from 'swr';
 import DebuggerLayout from '@/components/Layout';
 import NextNprogress from 'nextjs-progressbar';
 
-import { FetchHelloWorld } from '@/api';
-import { MIDDLE_ENDPOINT } from '@/api/const';
 import { APP_COLOR } from '@/const';
-import DebuggerAlert from '@/components/UI/alert';
+
+import Head from 'next/head';
+// MUI Core
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from '@/context/materiaUI/theme';
+
 function MyApp({ Component, pageProps }) {
-  const { error } = useSWR(MIDDLE_ENDPOINT.HELLO_WORLD, FetchHelloWorld)
+  // const { error } = useSWR(MIDDLE_ENDPOINT.HELLO_WORLD, FetchHelloWorld, { errorRetryCount: 1 })
 
   return (
     <>
+      <Head>
+        <title>Taiwan De-bugger</title>
+        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+      </Head>
       <NextNprogress
         color={APP_COLOR.GREEN_PRIMARY}
         startPosition={0.3}
@@ -23,10 +31,13 @@ function MyApp({ Component, pageProps }) {
         showOnShallow={true}
       />
       <DebuggerLayout  >
-        {
+        {/* {
           error && <DebuggerAlert msg={"server connection error"} />
-        }
-        <Component {...pageProps} />
+        } */}
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Component {...pageProps} />
+        </ThemeProvider>
       </DebuggerLayout>
     </>
   )

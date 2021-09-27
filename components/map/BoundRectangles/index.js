@@ -1,6 +1,6 @@
 import { CircleMarker } from 'react-leaflet'
 
-import { useMemo, useState } from "react"
+import { memo, useMemo, useState } from "react"
 import { useMap } from 'react-leaflet';
 
 /**
@@ -47,4 +47,4 @@ function BoundsRectangles({ RectableInfo }) {
   )
 }
 
-export default BoundsRectangles
+export default memo(BoundsRectangles)

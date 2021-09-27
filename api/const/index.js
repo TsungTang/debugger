@@ -8,5 +8,10 @@ export const API_ENDPOINT = {
 }
 
 export const MIDDLE_ENDPOINT = {
-  HELLO_WORLD: "/api/helloworld"
+  HELLO_WORLD: "api/helloworld",
+  BIOINFO: "api/bioinfo",
+  BIODIST: 'api/biodist',
+  BIOTRACK: 'api/biotrack',
+  ECODIV: 'api/ecodiv',
+  COUNTRY: 'api/country'
 }
