@@ -41,7 +41,7 @@ export const FetchCountryArr = async (country) => {
  */
 export const FetchBioinfo = async (payload) => {
   try {
-    const res = await axiosDebugger.get(MIDDLE_ENDPOINT.BIOINFO, payload)
+    const res = await axiosDebugger.post(MIDDLE_ENDPOINT.BIOINFO, payload)
     return res.data
   } catch (error) {
     console.error(error)
@@ -55,7 +55,7 @@ export const FetchBioinfo = async (payload) => {
  */
 export const FetchBioDist = async (payload) => {
   try {
-    const res = await axiosDebugger.get(MIDDLE_ENDPOINT.BIODIST, payload)
+    const res = await axiosDebugger.post(MIDDLE_ENDPOINT.BIODIST, payload)
     return res.data
   } catch (error) {
     console.error(error)

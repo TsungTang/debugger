@@ -10,7 +10,8 @@ module.exports = {
         "dark-navy": "#0A2F5C"
       },
       boxShadow: {
-        "nav-shadow": "0px 2px 14px rgba(137, 174, 255, 0.2)"
+        "nav-shadow": "0px 2px 14px rgba(137, 174, 255, 0.2)",
+        "card-hover": "0px 0px 999px 999px rgba(255, 255, 255, 0.5)"
       }
     },
   },
