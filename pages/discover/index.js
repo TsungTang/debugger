@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 import { useState } from 'react';
 
 import { _uuid } from '@/utils';
-import { DISCOVER_STAGE } from './const';
+import { DISCOVER_STAGE } from '@/const';
 
 
 const Map = dynamic(

@@ -15,3 +15,10 @@ export const INSECTS_TYPE = {
   COLEOPTERA: "coleoptera"
 }
 
+
+export const DISCOVER_STAGE = {
+  UNSELECT: "UNSELECT",
+  SELECT_ONE: "SELECT_ONE",
+  SELECT_TWO: "SELECT_TWO"
+}
+
