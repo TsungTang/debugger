@@ -8,12 +8,12 @@ import { useState } from "react";
 
 
 function DebuggerLayout({ children }) {
-  const [currentCountry, setCurrentCountry] = useState("All Taiwan")
+  const [currentCountry, setCurrentCountry] = useState("Whole Taiwan")
   const handleSetCurrentCountry = (newCountry) => {
     setCurrentCountry(newCountry)
   }
   const handleResetCurrentCountry = () => {
-    setCurrentCountry("All Taiwan")
+    setCurrentCountry("Whole Taiwan")
   }
 
   const [selectInsect, setSelectInsect] = useState([])

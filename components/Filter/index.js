@@ -8,7 +8,7 @@ import CountryContext from "@/context/CountryContext";
 import { AiFillFilter } from "react-icons/ai"
 
 function DebuggerFilter() {
-  const [seletCountry, setSelectCountry] = useState("All Taiwan")
+  const [seletCountry, setSelectCountry] = useState("Whole Taiwan")
   const countryStore = useContext(CountryContext);
 
   const handleChange = event => {
@@ -31,10 +31,10 @@ function DebuggerFilter() {
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             value={seletCountry}
-            defaultValue={"All Taiwan"}
+            defaultValue={"Whole Taiwan"}
             onChange={handleChange}
           >
-            <MenuItem value={"All Taiwan"}>All Taiwan</MenuItem>
+            <MenuItem value={"Whole Taiwan"}>Whole Taiwan</MenuItem>
             {
               countryKeys.map(el => {
                 return <MenuItem value={COUNTRY_NAME_LIST[el]} key={_uuid()}>{COUNTRY_NAME_LIST[el]}</MenuItem >

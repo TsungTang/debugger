@@ -23,6 +23,7 @@
     "react-leaflet-draw": "^0.19.8",
     "react-responsive-carousel": "^3.2.21",
     "react-use": "^17.3.1",
+    "recharts": "^2.1.4",
     "swr": "^1.0.1"
   },
   "devDependencies": {

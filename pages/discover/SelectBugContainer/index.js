@@ -24,7 +24,7 @@ function SelectBugContainer({ toMap }) {
       .container{ 
       display: grid;
       grid-gap: 60px;
-      grid-template-columns: repeat(auto-fill, 220px);
+      grid-template-columns: repeat(auto-fill, 240px);
       }`
       }
 

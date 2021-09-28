@@ -2,7 +2,7 @@ import { createContext } from "react";
 
 const CountryContext = createContext({
   countryArr: [],
-  currentCountry: "All Taiwan",
+  currentCountry: "Whole Taiwan",
   handleSetCurrentCountry: () => { },
   handleResetCurrentCountry: () => { }
 })
