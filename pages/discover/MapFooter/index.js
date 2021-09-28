@@ -1,12 +1,18 @@
-import { memo } from 'react';
+import { memo, useState } from 'react';
 import { AreaChart, Area, XAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
+import { HiChevronDoubleUp, HiChevronDoubleDown } from "react-icons/hi"
 
 
 function MapFooter({ ecoData }) {
+  const [expand, setExpand] = useState(false)
+  const handleExpand = () => {
+    setExpand(!expand)
+  }
   return (
     <>
-      <div className="absolute left-0 bottom-0 right-0" style={{ height: "100px", zIndex: 999, backgroundColor: "rgba(0, 0, 0, 0.8)" }}>
+      <div className="absolute left-0 bottom-0 right-0" style={{ height: expand ? "250px" : "100px", zIndex: 999, backgroundColor: "rgba(0, 0, 0, 0.8)" }}>
+        <div onClick={handleExpand} className="absolute text-3xl font-bold right-2 cursor-pointer" style={{ bottom: expand ? "260px" : "110px", zIndex: 999 }} >{expand ? <HiChevronDoubleDown /> : <HiChevronDoubleUp />}</div>
         {ecoData &&
           <ResponsiveContainer width="100%" height="100%">
             <AreaChart

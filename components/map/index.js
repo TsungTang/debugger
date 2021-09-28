@@ -13,7 +13,7 @@ import CustomCircleMark from './CustomCircleMark';
 /** data */
 import { RectanglesData } from './data/bound';
 import React, { useContext, useState } from 'react';
-import { _uuid, YearSeasonToDate } from '@/utils';
+import { _uuid, YearSeasonToDate, getYearSeason } from '@/utils';
 import DebuggerFilter from '../Filter';
 import MapFooter from '@/pages/discover/MapFooter';
 
@@ -78,7 +78,8 @@ const Map = ({ MapType }) => {
         showTrack && trackData && trackData.axis.map((axis, i) => (
           <CircleMarker key={_uuid()} center={axis} pathOptions={{ color: APP_COLOR.HIGHTLIGHT_GREEN }}
             radius={5} fillOpacity={1}>
-            <Tooltip>{trackData.date[i]}</Tooltip>
+            <Tooltip>{"Date: " + getYearSeason(trackData.date[i])}
+            </Tooltip>
           </CircleMarker>
         ))
       }
