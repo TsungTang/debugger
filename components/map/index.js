@@ -16,6 +16,7 @@ import { RectanglesData } from './data/bound';
 import React, { useContext } from 'react';
 import { _uuid } from '@/utils';
 import DebuggerFilter from '../Filter';
+import MapFooter from '@/pages/discover/MapFooter';
 
 import useSWR from 'swr';
 import { FetchBioDist } from '@/api';
@@ -28,10 +29,12 @@ const Map = ({ MapType }) => {
 
   const { selectInsect } = useContext(InsectContext)
   const payload = { name: selectInsect[0], polygon: [], date: "2020-01-01" }
-  const { data, error } = useSWR(MIDDLE_ENDPOINT.BIODIST, () => FetchBioDist(payload))
+  const { data, error } = useSWR(MIDDLE_ENDPOINT.BIODIST + JSON.stringify(payload), () => FetchBioDist(payload))
   return (
     <MapContainer className="relative bg-light-green" center={[23.773, 120.959]} zoom={7} scrollWheelZoom={true} style={{ height: "calc(100vh - 80px)", width: "100%" }}>
       <DebuggerFilter />
+      <MapFooter />
+
       <TileLayer
         attribution={mapInfo.attribution}
         url={mapInfo.url}
@@ -54,7 +57,6 @@ const Map = ({ MapType }) => {
 
         )
       }
-
     </MapContainer>
   )
 }

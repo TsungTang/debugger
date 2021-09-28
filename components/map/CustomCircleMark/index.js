@@ -27,9 +27,9 @@ function CustomCircleMark({ RectableInfo }) {
     <>
       {centerArr.filter((_, i) => valueArrFlat[i] > 0).map((local, index) => (<CircleMarker key={_uuid()} center={local} color={color}
         fillColor={color}
-        fillOpacity={opacity + (valueArrFlat[index] / 300)}
+        fillOpacity={opacity}
         opacity={0}
-        radius={valueArrFlat[index]} />))
+        radius={valueArrFlat[index] > 100 ? 100 : valueArrFlat[index]} />))
       }
     </>
   )

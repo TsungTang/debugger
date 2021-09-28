@@ -29,7 +29,7 @@ function SelectBugContainer({ toMap }) {
       }
 
       </style>
-      <div className="h-full w-full">
+      <div className="h-full w-full pb-6">
         <div className="mx-auto w-4/5 flex flex-col h-full">
           <header className="pt-10 pb-5 text-3xl font-bold text-dark-navy">
             <h3 onClick={toMap}>Insect Library</h3>
