@@ -8,28 +8,33 @@ function Navbar() {
   return (
     <nav className="h-[80px] shadow-nav-shadow flex justify-between items-end px-4 md:px-10 xl:px-[60px] ">
       <div className="" >
-        <Image width="100" height="60" src={mainImage} alt="Picture of the author" />
+        <Link href="/">
+          <Image className="cursor-pointer" width="100" height="60" src={mainImage} alt="Picture of the author" />
+        </Link>
       </div>
-      <div className="mb-4 font-bold text-xl">
+      <div className="mb-4 font-bold text-2xl text-dark-navy">
         <Link href="/">
           <button className={`mr-4 lg:mr-12 relative ${router.pathname === "/" ? "text-green-primary" : ""}`} >
             Home
-            {router.pathname === "/" && <div className=" bg-green-primary rounded-md h-2 absolute w-full z-10"></div>
+            {router.pathname === "/" && <div className=" bg-green-primary rounded-md h-2 absolute -left-1 -right-1 z-10"></div>
             }
           </button>
         </Link>
         <Link href="/discover">
           <button className={`mr-4 lg:mr-12 relative ${router.pathname === "/discover" ? "text-green-primary" : ""}`}>
             Discover
-            {router.pathname === "/discover" && <div className=" bg-green-primary rounded-md h-2 absolute w-full z-10"></div>
+            {router.pathname === "/discover" && <div className=" bg-green-primary rounded-md h-2 absolute -left-1 -right-1 z-10"></div>
             }
           </button>
         </Link>
-        <button className={`relative ${router.pathname === "/about-team" ? "text-green-primary" : ""}`}>
-          About Team
-          {router.pathname === "/about-team" && <div className=" bg-green-primary rounded-md h-2 absolute w-full z-10"></div>
-          }
-        </button>
+        <Link href="/about">
+          <button className={`relative ${router.pathname === "/about-team" ? "text-green-primary" : ""}`}>
+            About
+            {router.pathname === "/about" && <div className=" bg-green-primary rounded-md h-2 absolute -left-1 -right-1 z-10"></div>
+            }
+          </button>
+        </Link>
+
       </div>
     </nav>
   )

@@ -17,11 +17,10 @@ import React from 'react';
 import { _uuid } from '@/utils';
 import DebuggerFilter from '../Filter';
 
-
 const Map = ({ MapType }) => {
   const { mapInfo } = useSwitchMap(MapType)
   return (
-    <MapContainer className="relative" center={[23.773, 120.959]} zoom={7} scrollWheelZoom={true} style={{ height: 600, width: "90%" }}>
+    <MapContainer className="relative bg-light-green" center={[23.773, 120.959]} zoom={7} scrollWheelZoom={true} style={{ height: "100%", width: "100%" }}>
       <DebuggerFilter />
       <TileLayer
         attribution={mapInfo.attribution}

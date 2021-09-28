@@ -5,6 +5,7 @@ import { _uuid } from "@/utils";
 
 import CountryContext from "@/context/CountryContext";
 
+import { AiFillFilter } from "react-icons/ai"
 
 function DebuggerFilter() {
   const [seletCountry, setSelectCountry] = useState("All Taiwan")
@@ -19,6 +20,7 @@ function DebuggerFilter() {
 
   return (
     <div className="w-60 h-52 absolute right-[10%] top-[10%] bg-white cursor-default" style={{ zIndex: 999 }}>
+      <AiFillFilter />
       <div className="text-2xl font-semibold">
         Filter Tool
       </div>
