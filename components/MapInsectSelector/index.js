@@ -42,7 +42,7 @@ function MapInsectSelector({ featimp }) {
   }
   const INSECTS_LIST = Object.values(INSECTS_TYPE)
   return (
-    <div className="absolute left-[10%] top-[10%]" style={{ zIndex: 999 }}>
+    <div className="absolute left-[5%] top-[10%]" style={{ zIndex: 999 }}>
 
       <FormControl>
         <Select className={classes.select} value={selectInsect}

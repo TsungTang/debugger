@@ -29,3 +29,24 @@ export function getYearSeason(dateStr) {
 
   return year + '-Q4';
 }
+
+/**
+ * 
+ * @param {string} yearSeason 
+ * return string
+ */
+export function YearSeasonToDate(yearSeason) {
+  const [year, season] = yearSeason.split("-")
+  switch (season) {
+    case "Q1":
+      return `${year}-01-01`
+    case "Q2":
+      return `${year}-04-01`
+    case "Q3":
+      return `${year}-07-01`
+    case "Q4":
+      return `${year}-10-01`
+    default:
+      break;
+  }
+}
