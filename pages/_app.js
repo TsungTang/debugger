@@ -1,5 +1,6 @@
 import 'tailwindcss/tailwind.css'
 import "@/style/font-icon.css"
+import '@/style/base.css'
 
 import DebuggerLayout from '@/components/Layout';
 import NextNprogress from 'nextjs-progressbar';

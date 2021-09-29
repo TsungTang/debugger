@@ -6,8 +6,7 @@ import { getYearSeason, YearSeasonToDate, _uuid } from "@/utils";
 
 // import CountryContext from "@/context/CountryContext";
 
-import { AiFillFilter } from "react-icons/ai"
-import { useOnClickOutside } from "@/hook";
+import { AiFillFilter, AiOutlineClose } from "react-icons/ai"
 import { APP_COLOR } from "@/const";
 
 const dateArr = [
@@ -159,7 +158,9 @@ function DebuggerFilter({ currDate, handleSetCurrDate, showTrack, handleSetShowT
           Filter
         </div>
       </div>
-      {open && <div className="mt-4 flex flex-col py-2 items-center justify-center bg-white shadow-selector rounded-2xl">
+      {open && <div className="mt-4 flex flex-col py-2 items-center justify-center bg-white shadow-selector rounded-2xl" style={{ zIndex: 999 }}>
+        <div className="w-full">
+          <button onClick={handleOpen} className="block ml-auto px-3"><AiOutlineClose style={{ fontSize: '20px' }} /></button></div>
         {/* <div className="text-xl font-medium">Date</div> */}
         <FormControl className="w-[140px] p-2" >
           <InputLabel htmlFor="demo-simple-select">Date</InputLabel>
