@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Taiwan De-bugger</title>
+        <title>de Bugger in Taiwan</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Head>
       <NextNprogress
