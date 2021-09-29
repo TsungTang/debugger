@@ -28,7 +28,7 @@ function Navbar() {
           </button>
         </Link>
         <Link href="/about">
-          <button className={`relative ${router.pathname === "/about-team" ? "text-green-primary" : ""}`}>
+          <button className={`relative ${router.pathname === "/about" ? "text-green-primary" : ""}`}>
             About
             {router.pathname === "/about" && <div className=" bg-green-primary rounded-md h-2 absolute -left-1 -right-1 z-10"></div>
             }
