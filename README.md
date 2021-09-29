@@ -1,29 +1,60 @@
-# Next.js + Tailwind CSS Example
+# de Bugger
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+Come and discover Taiwan’s insects
+# What is de Bugger?
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
+DeBugger is a geographic bioinfo emulator empowered by a CNN engine to integrate the rich information including precipitation, vegetation, temperature, etc. provided by NASA Earthdata Search. Based on our novel bio-vectors and environmental conditions, DeBugger can predict the future distribution of different types of insects.
+
+Furthermore, we believe that the prediction of different species can rely on different environmental information. To address this problem, an attention module is integrated into the CNN which selects important features automatically during training.
+
+In this way, the attention module masks out all unrelated information and leaves the import feature for further usage.
+
+## How to use it?
+
+The proposed model, insect2vec, calculates an embedding for each insect by considering the co-occurrence between insects in a real-world environment. The insect2vec (bio-vector) can be applied in many analytical tasks.
+
+For example, one can easily estimate the habitat distribution of an insect by using the bio-vector integrated with geo-spatial data. Based on this model, one can also predict which insect species could be harsh to the environment in a place and accordingly take actions to avoid predictable ecological disasters.
+
+## DeBugger Squad
+
+https://hackmd.io/_uploads/ByI6L28VK.png
 
 ## Preview
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+### Home
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+https://hackmd.io/_uploads/BkClDnU4F.png
 
-## Deploy your own
+https://hackmd.io/_uploads/ByO7v38VK.png
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+### Discover
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+https://hackmd.io/_uploads/rJpBDn8EF.png
 
-## How to use
+https://hackmd.io/_uploads/HJNOD3I4Y.png
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+https://hackmd.io/_uploads/H1fcPhI4Y.png
+
+
+### About 
+
+https://hackmd.io/_uploads/Hkn6D2L4K.png
+
+
+## Setup development environment
 
 ```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+git clone git@github.com:TsungTang/debugger.git
+
+cd debugger
+
+npm install
+npm run dev
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## Website
+
+Deploy it to the cloud with [Vercel](https://debugger.vercel.app/)
+
+- https://debugger.vercel.app/
+
