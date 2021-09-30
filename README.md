@@ -1,6 +1,21 @@
 # de Bugger
 
 Come and discover Taiwan’s insects
+
+## Related Developer
+
+- [Bonzo](https://github.com/bonzoyang)
+
+For `de-Bugger-backend/backend`
+
+- [s83711123456789](https://github.com/s83711123456789)
+
+For `de-Bugger-backend/DeBuggerNet`
+
+- [iankuoli](https://github.com/iankuoli)
+
+For `de-Bugger-backend/Insect2Vec`
+
 # What is de Bugger?
 
 DeBugger is a geographic bioinfo emulator empowered by a CNN engine to integrate the rich information including precipitation, vegetation, temperature, etc. provided by NASA Earthdata Search. Based on our novel bio-vectors and environmental conditions, DeBugger can predict the future distribution of different types of insects.
