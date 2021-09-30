@@ -1,0 +1,7 @@
+,Name,F1Name,F1Value,F2Name,F2Value,F3Name,F3Value,F4Name,F4Value
+0,butterfly,Elevation,7.114819,Precipitation,7.830591,Land Cover,6.138754,Vegetation,5.2620345
+1,moth,Elevation,4.4794938,Precipitation,6.057827,Land Cover,4.9943453,Vegetation,4.4748193
+2,coleoptera,Elevation,4.7619212,Precipitation,5.257653599999999,Land Cover,4.9666052999999994,Vegetation,5.0912017
+3,odonata,Elevation,2.212962,Precipitation,4.3749326,Land Cover,4.6390513,Vegetation,4.9323854
+4,otherinsect,Elevation,4.902665,Precipitation,5.66207,Land Cover,4.5663434,Vegetation,5.351308
+5,spider,Elevation,4.998114,Precipitation,5.0018156000000005,Land Cover,5.000269,Vegetation,4.9997163

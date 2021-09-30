@@ -1,0 +1,9 @@
+[submodule "backend"]
+	path = backend
+	url = git@github.com:bonzoyang/de-Bugger-backend.git
+[submodule "DeBuggerNet"]
+	path = DeBuggerNet
+	url = git@github.com:s83711123456789/DeBuggerNet.git
+[submodule "Insect2Vec"]
+	path = Insect2Vec
+	url = git@github.com:iankuoli/Insect2Vec.git
