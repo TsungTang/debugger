@@ -17,28 +17,28 @@ For example, one can easily estimate the habitat distribution of an insect by us
 
 ## DeBugger Squad
 
-https://hackmd.io/_uploads/ByI6L28VK.png
+![image](https://user-images.githubusercontent.com/20000669/135740648-c41ec050-90eb-4877-bf4a-72dc4f8bad7a.png)
 
 ## Preview
 
 ### Home
 
-https://hackmd.io/_uploads/BkClDnU4F.png
+![image](https://user-images.githubusercontent.com/20000669/135740660-1e16d6b7-d90d-445b-b47e-cfae4644902c.png)
 
-https://hackmd.io/_uploads/ByO7v38VK.png
+![image](https://user-images.githubusercontent.com/20000669/135740668-67b958f0-f5d4-4152-b449-67322718fe19.png)
 
 ### Discover
 
-https://hackmd.io/_uploads/rJpBDn8EF.png
+![image](https://user-images.githubusercontent.com/20000669/135740678-af72d28b-e834-4bd4-ad43-e9e52666f181.png)
 
-https://hackmd.io/_uploads/HJNOD3I4Y.png
+![image](https://user-images.githubusercontent.com/20000669/135740691-4e957bf0-b7d8-47cb-a06b-05e3b6331f15.png)
 
-https://hackmd.io/_uploads/H1fcPhI4Y.png
+![image](https://user-images.githubusercontent.com/20000669/135740704-a86c0247-fa2f-47ec-82a8-65196bcbf0b8.png)
 
 
 ### About 
 
-https://hackmd.io/_uploads/Hkn6D2L4K.png
+![image](https://user-images.githubusercontent.com/20000669/135740710-d4949b1e-0186-4313-83ad-6a9b8ef423e9.png)
 
 
 ## Setup development environment
