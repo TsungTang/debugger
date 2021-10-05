@@ -69,7 +69,7 @@ function MapInsectSelector({ }) {
   }
   const INSECTS_LIST = Object.values(INSECTS_TYPE)
   return (
-    <div ref={selector} className="absolute left-[8%] top-[10%]" style={{ zIndex: 999 }}>
+    <div ref={selector} className="absolute left-[4%] top-[10%]" style={{ zIndex: 999 }}>
       <FormControl>
         <Select className={classes.select} value={selectInsect}
           defaultValue={selectInsect}

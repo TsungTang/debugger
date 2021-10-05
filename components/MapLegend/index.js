@@ -7,7 +7,7 @@ export default function MapLegend({ expand }) {
   if (!selectInsect || !selectInsect[0]) return null
   return (
     <>
-      <div className="absolute right-[5%] bg-legend-bg rounded-[10px] p-5" style={{ zIndex: 999, bottom: expand ? "260px" : "120px" }}>
+      <div className="absolute right-[4%] bg-legend-bg rounded-[10px] p-5" style={{ zIndex: 999, bottom: expand ? "260px" : "120px" }}>
         <div className="flex flex-col items-start">
           <h2 className="flex items-center mb-3 text-xs text-white"><div className="h-5 w-5 bg-green-primary rounded-full mr-[10px]"></div>Distribution of {capitalizeFirstLetter(selectInsect[0])}</h2>
 
