@@ -24,6 +24,7 @@ import InsectContext from '@/context/InsectContext';
 import { APP_COLOR } from '@/const';
 import MapInsectSelector from '../MapInsectSelector';
 import FeatureImportance from '@/components/FaetureImpotance'
+import MapLegend from '@/components//MapLegend';
 
 const Map = ({ MapType }) => {
   const { mapInfo } = useSwitchMap(MapType)
@@ -82,7 +83,7 @@ const Map = ({ MapType }) => {
   return (
     <MapContainer className="relative bg-light-green" center={[23.773, 120.959]} zoom={8} scrollWheelZoom={true} style={{ height: "calc(100vh - 80px)", width: "100%" }}>
       {isPredictPeriod && (
-        <div onClick={handleHighlightFilter} className="absolute cursor-pointer w-full top-0 bg-light-green left-0 font-normal text-base text-center py-1" style={{ zIndex: 999 }}>You are viewing prediction of future duration <span className="text-green-primary text-lg">2021 Q4 - 2022 Q4</span> below. Click Filter to change the time slot.</div>
+        <div onClick={handleHighlightFilter} className="absolute cursor-pointer w-full top-0 bg-light-green left-0 font-bold text-base text-center py-1" style={{ zIndex: 999 }}>You are viewing prediction of future duration <span className="text-green-primary">2021 Q4 - 2022 Q4</span> below. Click Filter to change the time slot.</div>
       )
       }
 
@@ -120,6 +121,7 @@ const Map = ({ MapType }) => {
           </CircleMarker>
         ))
       }
+      <MapLegend expand={expand} />
 
     </MapContainer>
   )

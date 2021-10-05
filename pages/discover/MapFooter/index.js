@@ -8,8 +8,8 @@ function MapFooter({ ecoData, expand, handleExpand }) {
 
   return (
     <>
-      <div className="absolute left-0 bottom-0 right-0" style={{ height: expand ? "250px" : "100px", zIndex: 999, backgroundColor: "rgba(0, 0, 0, 0.8)" }}>
-        <div onClick={handleExpand} className="absolute text-3xl font-bold right-2 cursor-pointer" style={{ bottom: expand ? "260px" : "110px", zIndex: 999 }} >{expand ? <HiChevronDoubleDown /> : <HiChevronDoubleUp />}</div>
+      <div className="absolute left-0 bottom-0 right-0" style={{ height: expand ? "250px" : "110px", zIndex: 999, backgroundColor: "rgba(0, 0, 0, 0.8)" }}>
+        <div onClick={handleExpand} className="absolute text-3xl font-bold right-2 cursor-pointer" style={{ bottom: expand ? "260px" : "115px", zIndex: 999 }} >{expand ? <HiChevronDoubleDown /> : <HiChevronDoubleUp />}</div>
         {ecoData &&
           <ResponsiveContainer width="100%" height="100%">
             <AreaChart
@@ -35,7 +35,7 @@ function MapFooter({ ecoData, expand, handleExpand }) {
               <XAxis stroke="#ACACAC" onClick={e => console.log(e)} dataKey="season" orientation={"top"} />
               <YAxis stroke="#ACACAC"><Label angle={-90} position='insideLeft' offset={10}
                 value="Diversity"
-                style={{ textAnchor: 'middle', fontSize: '12px', fill: '#ACACAC' }} /></YAxis>
+                style={{ textAnchor: 'start', fontSize: '18px', fontWeight: 'bold', fill: '#ffffff' }} /></YAxis>
               <Tooltip />
               <Area type="monotone" dataKey="diversity" stroke="#4AEAD3" fillOpacity={1} fill="url(#colorDiversity)" />
             </AreaChart>

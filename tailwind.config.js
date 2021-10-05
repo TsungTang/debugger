@@ -8,7 +8,10 @@ module.exports = {
         "green-primary": "#30AA99",
         "light-green": "#C7E8E3",
         "dark-navy": "#0A2F5C",
-        "gray": "#ACACAC"
+        "gray": "#ACACAC",
+        "highlight-purple": "#CDBCFF",
+        "highlight-green": "#4AEAD3",
+        "legend-bg": "rgba(0, 0, 0, 0.5)"
       },
       boxShadow: {
         "nav-shadow": "0px 2px 14px rgba(137, 174, 255, 0.2)",

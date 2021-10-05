@@ -144,7 +144,7 @@ function DebuggerFilter({ currDate, handleSetCurrDate, showTrack, handleSetShowT
   const classes = useStyles()
 
   return (
-    <div className="w-60 h-52 absolute right-[5%] top-[10%] " style={{ zIndex: 999 }}>
+    <div className="w-60 h-52 absolute right-[1%] top-[10%] " style={{ zIndex: 999 }}>
       <div onClick={handleOpen} className={(highlightFilter ? "shadow-highlight " : "shadow-selector ") + (open ? "bg-white " : "bg-light-green ") + " flex items-center cursor-pointer  w-[100px] rounded-xl hover:bg-white  px-2 py-1"}>
         <AiFillFilter className="text-xl mr-2" />
         <div className="text-xl font-semibold">

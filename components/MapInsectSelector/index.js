@@ -1,6 +1,6 @@
 import InsectContext from "@/context/InsectContext"
 import { _uuid } from "@/utils"
-import { useContext, useState, useRef } from "react"
+import { useContext, useRef } from "react"
 
 
 import { MenuItem, Select, FormControl, makeStyles } from "@material-ui/core"
@@ -32,16 +32,19 @@ const useStyles = makeStyles({
     backgroundColor: APP_COLOR.LIGHT_GREEN,
     fontSize: "36px",
     fontWeight: "bold",
-    borderRadius: "15px",
-    padding: "10px 1px 0 15px",
+    borderRadius: "20px",
+    padding: "20px 10px 0 20px",
     '&:hover': {
       backgroundColor: "#ffffff",
     },
     '&:active': {
       backgroundColor: "#ffffff",
+      borderRadius: "20px",
     },
     '&:focus': {
       backgroundColor: "#ffffff",
+      borderRadius: "20px",
+
     }
 
   },
@@ -66,12 +69,13 @@ function MapInsectSelector({ }) {
   }
   const INSECTS_LIST = Object.values(INSECTS_TYPE)
   return (
-    <div ref={selector} className="absolute left-[5%] top-[10%]" style={{ zIndex: 999 }}>
+    <div ref={selector} className="absolute left-[8%] top-[10%]" style={{ zIndex: 999 }}>
       <FormControl>
         <Select className={classes.select} value={selectInsect}
           defaultValue={selectInsect}
           onChange={resetInsect}
           id="demo-simple-select"
+          disableUnderline
           inputProps={{
             classes: {
               icon: classes.icon,
