@@ -29,26 +29,35 @@ const useStyles = makeStyles({
   },
   root: {
     color: APP_COLOR.DARK_NAVY,
+    backgroundColor: APP_COLOR.LIGHT_GREEN,
     fontSize: "36px",
     fontWeight: "bold",
+    borderRadius: "15px",
+    padding: "10px 1px 0 15px",
     '&:hover': {
-      color: APP_COLOR.GREEN_PRIMARY
+      backgroundColor: "#ffffff",
+    },
+    '&:active': {
+      backgroundColor: "#ffffff",
+    },
+    '&:focus': {
+      backgroundColor: "#ffffff",
     }
 
   },
 })
 
-function MapInsectSelector({ featimp }) {
+function MapInsectSelector({ }) {
   const classes = useStyles()
 
   const selector = useRef(null)
-  const [openFeatimp, setOpenFeatimp] = useState(false)
-  const handelHoverEnterEvent = () => {
-    setOpenFeatimp(true)
-  }
-  const handelHoverLeaveEvent = () => {
-    setOpenFeatimp(false)
-  }
+  // const [openFeatimp, setOpenFeatimp] = useState(false)
+  // const handelHoverEnterEvent = () => {
+  //   setOpenFeatimp(true)
+  // }
+  // const handelHoverLeaveEvent = () => {
+  //   setOpenFeatimp(false)
+  // }
 
 
   const { selectInsect, handleSetSelectInsect } = useContext(InsectContext)
@@ -57,7 +66,7 @@ function MapInsectSelector({ featimp }) {
   }
   const INSECTS_LIST = Object.values(INSECTS_TYPE)
   return (
-    <div onMouseEnter={handelHoverEnterEvent} onMouseLeave={handelHoverLeaveEvent} ref={selector} className="absolute left-[5%] top-[10%]" style={{ zIndex: 999 }}>
+    <div ref={selector} className="absolute left-[5%] top-[10%]" style={{ zIndex: 999 }}>
       <FormControl>
         <Select className={classes.select} value={selectInsect}
           defaultValue={selectInsect}
@@ -75,20 +84,6 @@ function MapInsectSelector({ featimp }) {
 
         </Select>
       </FormControl>
-      {openFeatimp && (
-        <div className="bg-white flex items-center px-7 py-4 rounded-2xl shadow-selector cursor-default">
-          {
-            featimp.map((el, i) => (
-              <div className={i !== featimp.length - 1 ? "mr-4" : ""} key={_uuid()}>
-                <h2 className="font-bold text-base">{el.name}</h2>
-                <div className="font-bold text-[22px] text-center rounded-2xl px-4 py-1 w-full shadow-selector">{el.value}</div>
-              </div>)
-            )
-          }
-        </div>
-      )
-      }
-
 
     </div>
   )

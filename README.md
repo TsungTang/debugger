@@ -67,6 +67,15 @@ npm install
 npm run dev
 ```
 
+with docker
+
+```
+docker build -t de-bugger . --no-cache
+docker run --rm -it -p 3000:3000 -v $(pwd):/frontend  de-bugger
+```
+
+Now you can view development website in http://localhost:3000/
+
 ## Website
 
 Deploy it to the cloud with [Vercel](https://debugger.vercel.app/)

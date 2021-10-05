@@ -12,7 +12,7 @@ import CustomCircleMark from './CustomCircleMark';
 
 /** data */
 import { RectanglesData } from './data/bound';
-import React, { useContext, useState } from 'react';
+import React, { useContext, useMemo, useState } from 'react';
 import { _uuid, YearSeasonToDate, getYearSeason } from '@/utils';
 import DebuggerFilter from '../Filter';
 import MapFooter from '@/pages/discover/MapFooter';
@@ -23,11 +23,25 @@ import { MIDDLE_ENDPOINT } from '@/api/const';
 import InsectContext from '@/context/InsectContext';
 import { APP_COLOR } from '@/const';
 import MapInsectSelector from '../MapInsectSelector';
+import FeatureImportance from '@/components/FaetureImpotance'
 
 const Map = ({ MapType }) => {
   const { mapInfo } = useSwitchMap(MapType)
 
-  const [currDate, setCurrDate] = useState("2020-01-01")
+  const [currDate, setCurrDate] = useState("2021-10-01")
+  const isPredictPeriod = useMemo(() => {
+    return new Date(currDate) >= new Date("2021-10-01")
+  }, [currDate])
+
+  const [highlightFilter, setHighlightFilter] = useState(false)
+  const handleHighlightFilter = () => {
+    setHighlightFilter(true)
+    setTimeout(() => {
+      setHighlightFilter(false)
+    }, 1000)
+  }
+
+
   const handleSetCurrDate = (yearSeason) => {
     const dateStr = YearSeasonToDate(yearSeason)
     setCurrDate(dateStr)
@@ -50,11 +64,34 @@ const Map = ({ MapType }) => {
   }
   const { data: trackData } = useSWR(MIDDLE_ENDPOINT.BIOTRACK + JSON.stringify(payload), () => FetchBioTrack(payload))
 
+  /** footer expand */
+  const [expand, setExpand] = useState(false)
+  const handleExpand = () => {
+    setExpand(!expand)
+  }
+
+  /** featimp show detail */
+  const [showDetail, setShowDetail] = useState(true)
+  const handleSetShowDetail = () => {
+    setShowDetail(!showDetail)
+  }
+
+  /** legend */
+  const [map, setMap] = useState(null);
+
   return (
     <MapContainer className="relative bg-light-green" center={[23.773, 120.959]} zoom={8} scrollWheelZoom={true} style={{ height: "calc(100vh - 80px)", width: "100%" }}>
-      <DebuggerFilter currDate={currDate} handleSetCurrDate={handleSetCurrDate} showTrack={showTrack} handleSetShowTrack={handleSetShowTrack} />
-      {data && <MapInsectSelector featimp={data.featimp} />}
-      <MapFooter ecoData={ecoData} />
+      {isPredictPeriod && (
+        <div onClick={handleHighlightFilter} className="absolute cursor-pointer w-full top-0 bg-light-green left-0 font-normal text-base text-center py-1" style={{ zIndex: 999 }}>You are viewing prediction of future duration <span className="text-green-primary text-lg">2021 Q4 - 2022 Q4</span> below. Click Filter to change the time slot.</div>
+      )
+      }
+
+      <DebuggerFilter highlightFilter={highlightFilter} currDate={currDate} handleSetCurrDate={handleSetCurrDate} showTrack={showTrack} handleSetShowTrack={handleSetShowTrack} />
+
+      <MapInsectSelector />
+      {data &&
+        <FeatureImportance showDetail={showDetail} handleSetShowDetail={handleSetShowDetail} expand={expand} featimp={data.featimp} />}
+      <MapFooter expand={expand} handleExpand={handleExpand} ecoData={ecoData} />
 
       <TileLayer
         attribution={mapInfo.attribution}
@@ -72,17 +109,18 @@ const Map = ({ MapType }) => {
         )
       }
       {
-        showTrack && trackData && <Polyline pathOptions={{ color: APP_COLOR.HIGHTLIGHT_GREEN }} positions={trackData.axis} />
+        showTrack && trackData && <Polyline pathOptions={{ color: APP_COLOR.HIGHLIGHT_PURPLE }} positions={trackData.axis} />
       }
       {
         showTrack && trackData && trackData.axis.map((axis, i) => (
-          <CircleMarker key={_uuid()} center={axis} pathOptions={{ color: APP_COLOR.HIGHTLIGHT_GREEN }}
+          <CircleMarker key={_uuid()} center={axis} pathOptions={{ color: APP_COLOR.HIGHLIGHT_PURPLE }}
             radius={5} fillOpacity={1}>
             <Tooltip>{"Date: " + getYearSeason(trackData.date[i])}
             </Tooltip>
           </CircleMarker>
         ))
       }
+
     </MapContainer>
   )
 }

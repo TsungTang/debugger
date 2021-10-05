@@ -13,7 +13,8 @@ module.exports = {
       boxShadow: {
         "nav-shadow": "0px 2px 14px rgba(137, 174, 255, 0.2)",
         "card-hover": "0px 0px 999px 999px rgba(255, 255, 255, 0.5)",
-        "selector": "0px 2px 6px rgba(48, 170, 153, 0.2)"
+        "selector": "0px 2px 6px rgba(48, 170, 153, 0.2)",
+        "highlight": "7px 7px 15px 8px #30AA99"
       }
     },
   },

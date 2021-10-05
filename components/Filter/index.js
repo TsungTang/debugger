@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import { MenuItem, Select, FormControl, InputLabel, makeStyles, Switch, FormControlLabel } from "@material-ui/core"
 // import { COUNTRY_ID_LIST, COUNTRY_NAME_LIST } from "./const";
@@ -128,13 +128,7 @@ const useStyles = makeStyles({
   },
 })
 
-function DebuggerFilter({ currDate, handleSetCurrDate, showTrack, handleSetShowTrack }) {
-  // const [seletCountry, setSelectCountry] = useState("Whole Taiwan")
-  // const countryStore = useContext(CountryContext);
-
-  // const handleChange = event => {
-  //   setSelectCountry(event.target.value)
-  // }
+function DebuggerFilter({ currDate, handleSetCurrDate, showTrack, handleSetShowTrack, highlightFilter }) {
   const [open, setOpen] = useState(true)
   const handleOpen = () => {
     setOpen(!open)
@@ -151,14 +145,13 @@ function DebuggerFilter({ currDate, handleSetCurrDate, showTrack, handleSetShowT
 
   return (
     <div className="w-60 h-52 absolute right-[5%] top-[10%] " style={{ zIndex: 999 }}>
-
-      <div onClick={handleOpen} className="flex items-center cursor-pointer bg-white w-[100px] rounded-xl shadow-selector px-2 py-1">
+      <div onClick={handleOpen} className={(highlightFilter ? "shadow-highlight " : "shadow-selector ") + (open ? "bg-white " : "bg-light-green ") + " flex items-center cursor-pointer  w-[100px] rounded-xl hover:bg-white  px-2 py-1"}>
         <AiFillFilter className="text-xl mr-2" />
         <div className="text-xl font-semibold">
           Filter
         </div>
       </div>
-      {open && <div className="mt-4 flex flex-col py-2 items-center justify-center bg-white shadow-selector rounded-2xl" style={{ zIndex: 999 }}>
+      {open && <div className="mt-4 flex flex-col py-2 items-center justify-center bg-white  rounded-2xl shadow-selector" style={{ zIndex: 999 }}>
         <div className="w-full">
           <button onClick={handleOpen} className="block ml-auto px-3"><AiOutlineClose style={{ fontSize: '20px' }} /></button></div>
         {/* <div className="text-xl font-medium">Date</div> */}
