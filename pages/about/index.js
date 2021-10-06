@@ -1,12 +1,6 @@
 import Image from "next/image"
 import Avatar from "@/components/Avatar"
 
-// import bonzo from "@/public/avatars/bonzo.png"
-// import Liyen from "@/public/avatars/Liyen.png"
-// import HaoChun from "@/public/avatars/HaoChun.png"
-// import Tang from "@/public/avatars/Tang.png"
-// import Yinchi from "@/public/avatars/Yinchi.png"
-// import ChiaLin from "@/public/avatars/ChiaLin.png"
 
 function About() {
 
@@ -16,8 +10,30 @@ function About() {
         <header><h2 className="text-3xl font-bold">About</h2></header>
 
         <div>
-          <h3 className="text-[22px] font-bold mt-4 px-6 lg:px-10 py-5">What is de Bugger?</h3>
-          <p className="font-normal text-base py-[30px] px-[60px] bg-white shadow-nav-shadow leading-5 rounded-2xl">DeBugger is a geographic bioinfo emulator empowered by a CNN engine to integrate the rich information including precipitation, vegetation, temperature, etc. provided by NASA Earthdata Search. Based on our novel bio-vectors and environmental conditions, DeBugger can predict the future distribution of different types of insects.
+          <h3 className="text-[22px] font-bold mt-4 px-6 lg:px-10 py-5">What is Bio-vector?</h3>
+          <p className="font-normal text-base py-[30px] px-[60px] bg-white shadow-nav-shadow leading-5 rounded-2xl">
+            <pre>
+              Bio-vector: encode the habitant distribution of species  </pre>
+            A species can be represented by a vector. Species in the same colony or with highly overlaped habitant distribution would have similar vectors.
+            <br />
+            Say that colony A and B are similar:
+            <li>
+              If a rare insect x appears in colony A, B might also be a potential colony where x shows up.
+            </li>
+            <li>If an endangered insect species x is successfully reproduced in A colony, then B would likely be another feasible colony for species reproduction.</li>
+            <li>If an ecological experiment is held in control group A, then B probably is a suitable treatment group.</li>
+            <li>To measure the similarity between species, in addition to taxonomy and DNA, bio-vector is a new similarity measurement from the perspective of the ecological environment.</li>
+
+            <div className="w-full flex justify-center mt-4">
+              <Image width="400" height="283" src="/bio-vector.jpg"></Image>
+            </div>
+
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-[22px] font-bold px-6 lg:px-10 py-5">What is de Bugger?</h3>
+          <p className="font-normal text-base py-[30px] px-[60px] bg-white shadow-nav-shadow leading-5 rounded-2xl">de Bugger is a geographic bioinfo emulator empowered by a CNN engine to integrate the rich information including precipitation, vegetation, temperature, etc. provided by NASA Earthdata Search. Based on our novel bio-vectors and environmental conditions, de Bugger can predict the future distribution of different types of insects.
             <br />
             <br />
 
@@ -39,7 +55,7 @@ function About() {
         </div>
 
         <div className="mt-5">
-          <h3 className="text-[22px]  font-bold px-6 lg:px-10 py-5">DeBugger Squad</h3>
+          <h3 className="text-[22px]  font-bold px-6 lg:px-10 py-5">de Bugger Squad</h3>
           <div className="flex pb-5 justify-around flex-wrap items-center">
             <Avatar className="mt-2 lg:mt-0" imgComp={<Image src={"/avatars/bonzo.jpg"} width={120} height={140} />} name={"Yu Chun / PM & Backend & Data Scientist"} />
             <Avatar className="mt-2 lg:mt-0" imgComp={<Image src={"/avatars/Liyen.jpg"} width={120} height={140} />} name={"Liyen / Consultant & Data Scientist"} />

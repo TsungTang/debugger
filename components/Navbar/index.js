@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Image from 'next/image'
-import mainImage from "@/public/main.png"
 
 function Navbar() {
   const router = useRouter()
@@ -9,7 +8,7 @@ function Navbar() {
     <nav className="h-[80px] shadow-nav-shadow flex justify-between items-end px-4 md:px-10 xl:px-[60px] ">
       <div className="" >
         <Link href="/">
-          <Image className="cursor-pointer" width="100" height="60" src={mainImage} alt="Picture of the author" />
+          <Image className="cursor-pointer" width="100" height="60" src="/logo.svg" alt="de Bugger" />
         </Link>
       </div>
       <div className="mb-4  text-dark-navy">
