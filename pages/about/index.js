@@ -57,10 +57,10 @@ function About() {
         <div className="mt-5">
           <h3 className="text-[22px]  font-bold px-6 lg:px-10 py-5">de Bugger Squad</h3>
           <div className="flex pb-5 justify-around flex-wrap items-center">
-            <Avatar className="mt-2 lg:mt-0" imgComp={<Image src={"/avatars/bonzo.jpg"} width={120} height={140} />} name={"Yu Chun / PM & Backend & Data Scientist"} />
-            <Avatar className="mt-2 lg:mt-0" imgComp={<Image src={"/avatars/Liyen.jpg"} width={120} height={140} />} name={"Liyen / Consultant & Data Scientist"} />
-            <Avatar className="mt-2 lg:mt-0" imgComp={<Image src={"/avatars/HaoChun.jpg"} width={120} height={140} />} name={"Hao Chun / Backend & Data Scientist"} />
-            <Avatar className="mt-2 lg:mt-0" imgComp={<Image src={"/avatars/Tang.jpg"} width={120} height={140} />} name={"Tsung Tang / Frontend"} />
+            <Avatar className="mt-2 lg:mt-0" link={"https://github.com/bonzoyang"} imgComp={<Image src={"/avatars/bonzo.jpg"} width={120} height={140} />} name={"Yu Chun / PM & Backend & Data Scientist"} />
+            <Avatar className="mt-2 lg:mt-0" link={"https://github.com/iankuoli"} imgComp={<Image src={"/avatars/Liyen.jpg"} width={120} height={140} />} name={"Liyen / Consultant & Data Scientist"} />
+            <Avatar className="mt-2 lg:mt-0" link={"https://github.com/s83711123456789"} imgComp={<Image src={"/avatars/HaoChun.jpg"} width={120} height={140} />} name={"Hao Chun / Backend & Data Scientist"} />
+            <Avatar className="mt-2 lg:mt-0" link={"https://github.com/TsungTang"} imgComp={<Image src={"/avatars/Tang.jpg"} width={120} height={140} />} name={"Tsung Tang / Frontend"} />
             <Avatar className="mt-2 lg:mt-0" imgComp={<Image src={"/avatars/Yinchi.jpg"} width={120} height={140} />} name={"Yinchi / UIUX"} />
             <Avatar className="mt-2 lg:mt-0" imgComp={<Image src={"/avatars/ChiaLin.jpg"} width={120} height={140} />} name={"Chia Lin / Marketing"} />
           </div>
