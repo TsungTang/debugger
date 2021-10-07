@@ -24,8 +24,8 @@ function About() {
             <li>If an ecological experiment is held in control group A, then B probably is a suitable treatment group.</li>
             <li>To measure the similarity between species, in addition to taxonomy and DNA, bio-vector is a new similarity measurement from the perspective of the ecological environment.</li>
 
-            <div className="w-full flex justify-center mt-4">
-              <Image width="400" height="283" src="/bio-vector.jpg"></Image>
+            <div className="flex justify-center mt-4">
+              <img width="500" height="362" src="/bio-vector.jpg"></img>
             </div>
 
           </p>
