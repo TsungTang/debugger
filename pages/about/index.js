@@ -11,7 +11,7 @@ function About() {
 
         <div>
           <h3 className="text-[22px] font-bold mt-4 px-6 lg:px-10 py-5">What is Bio-vector?</h3>
-          <p className="font-normal text-base py-[30px] px-[60px] bg-white shadow-nav-shadow leading-5 rounded-2xl">
+          <div className="font-normal text-base py-[30px] px-[60px] bg-white shadow-nav-shadow leading-5 rounded-2xl">
             <pre>
               Bio-vector: encode the habitant distribution of species  </pre>
             A species can be represented by a vector. Species in the same colony or with highly overlaped habitant distribution would have similar vectors.
@@ -28,7 +28,7 @@ function About() {
               <img width="500" height="362" src="/bio-vector.jpg"></img>
             </div>
 
-          </p>
+          </div>
         </div>
 
         <div>
@@ -61,7 +61,7 @@ function About() {
             <Avatar className="mt-2 lg:mt-0" link={"https://github.com/iankuoli"} imgComp={<Image src={"/avatars/Liyen.jpg"} width={120} height={140} />} name={"Liyen / Consultant & Data Scientist"} />
             <Avatar className="mt-2 lg:mt-0" link={"https://github.com/s83711123456789"} imgComp={<Image src={"/avatars/HaoChun.jpg"} width={120} height={140} />} name={"Hao Chun / Backend & Data Scientist"} />
             <Avatar className="mt-2 lg:mt-0" link={"https://github.com/TsungTang"} imgComp={<Image src={"/avatars/Tang.jpg"} width={120} height={140} />} name={"Tsung Tang / Frontend"} />
-            <Avatar link={"https://www.yinchiweng.com/?fbclid=IwAR1ea_DwtKMyHkvAudNRmU_kzA94-1MzD7gkRgr-2OS_iiBKWxT_A0mbf5k"} className="mt-2 lg:mt-0" imgComp={<Image src={"/avatars/Yinchi.jpg"} width={120} height={140} />} name={"Yinchi / UIUX"} />
+            <Avatar link={"https://www.yinchiweng.com/?fbclid=IwAR1ea_DwtKMyHkvAudNRmU_kzA94-1MzD7gkRgr-2OS_iiBKWxT_A0mbf5k "} className="mt-2 lg:mt-0" imgComp={<Image src={"/avatars/Yinchi.jpg"} width={120} height={140} />} name={"Yinchi / UIUX"} />
             <Avatar className="mt-2 lg:mt-0" imgComp={<Image src={"/avatars/ChiaLin.jpg"} width={120} height={140} />} name={"Chia Lin / Marketing"} />
           </div>
         </div>
