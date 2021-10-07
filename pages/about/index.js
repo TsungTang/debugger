@@ -61,7 +61,7 @@ function About() {
             <Avatar className="mt-2 lg:mt-0" link={"https://github.com/iankuoli"} imgComp={<Image src={"/avatars/Liyen.jpg"} width={120} height={140} />} name={"Liyen / Consultant & Data Scientist"} />
             <Avatar className="mt-2 lg:mt-0" link={"https://github.com/s83711123456789"} imgComp={<Image src={"/avatars/HaoChun.jpg"} width={120} height={140} />} name={"Hao Chun / Backend & Data Scientist"} />
             <Avatar className="mt-2 lg:mt-0" link={"https://github.com/TsungTang"} imgComp={<Image src={"/avatars/Tang.jpg"} width={120} height={140} />} name={"Tsung Tang / Frontend"} />
-            <Avatar className="mt-2 lg:mt-0" imgComp={<Image src={"/avatars/Yinchi.jpg"} width={120} height={140} />} name={"Yinchi / UIUX"} />
+            <Avatar link={"https://www.yinchiweng.com/?fbclid=IwAR1ea_DwtKMyHkvAudNRmU_kzA94-1MzD7gkRgr-2OS_iiBKWxT_A0mbf5k"} className="mt-2 lg:mt-0" imgComp={<Image src={"/avatars/Yinchi.jpg"} width={120} height={140} />} name={"Yinchi / UIUX"} />
             <Avatar className="mt-2 lg:mt-0" imgComp={<Image src={"/avatars/ChiaLin.jpg"} width={120} height={140} />} name={"Chia Lin / Marketing"} />
           </div>
         </div>
